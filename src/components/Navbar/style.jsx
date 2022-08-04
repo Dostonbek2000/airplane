@@ -69,6 +69,30 @@ export const Links = styled(NavLink)`
     justify-content: center;
     align-items: center;
     margin: 5px 15px;
+    box-shadow: 0px 0px 10px 1px #91caff;
+    @media (max-width:800px) {
+        width: 45px;
+        span{
+            display: none;
+        }
+    }
+    &:hover{
+        cursor: pointer;
+    }
+    
+`
+export const Links1 = styled(NavLink)`
+    border: 1px solid ${specialColor};
+    color: ${specialColor};
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 1px #91caff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 15px;
     @media (max-width:800px) {
         width: 45px;
         span{
@@ -82,7 +106,7 @@ export const Links = styled(NavLink)`
 `
 
 export const HomeIcon = styled(HomeRoundedIcon)`
-    color: white !important;
+    color: ${specialColor} !important;
     font-size: 20px !important;
     margin-right:6px;
     @media (max-width:800px) {

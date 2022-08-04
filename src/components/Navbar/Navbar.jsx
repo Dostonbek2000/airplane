@@ -1,5 +1,5 @@
 import React from 'react'
-import { CompareIcon, Container, HomeIcon, Links, LinkWrapper, LogoImg, LogoText, LogoWrapper, NavbarWrapper, Span } from './style'
+import { CompareIcon, Container, HomeIcon, Links, Links1, LinkWrapper, LogoImg, LogoText, LogoWrapper, NavbarWrapper, Span } from './style'
 import Logo from '../../assets/icons/logo.png';
 
 
@@ -15,7 +15,7 @@ const Navbar = () => {
                <LogoText>Flight</LogoText>
             </LogoWrapper>
             <LinkWrapper>
-               <Links to='/'><HomeIcon /> <Span>Home</Span> </Links>
+               <Links1 to='/'><HomeIcon /> <Span>Home</Span> </Links1>
                <Links to='/comparison'> <CompareIcon /> <Span>Comparison</Span></Links>
             </LinkWrapper>
         </NavbarWrapper>
