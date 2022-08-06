@@ -39,6 +39,7 @@
     "react-widgets": "^5.8.4",
     "redux": "^4.2.0",
     "sass": "^1.53.0",
+    "smart-react-components": "^1.12.11",
     "styled-components": "^5.3.5",
     "sweetalert2": "^11.4.19",
     "swiper": "^8.1.4",

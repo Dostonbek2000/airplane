@@ -7,10 +7,8 @@ export const Container = styled.div`
     box-sizing: border-box;
 `
 export const TitleContainer = styled.div`
-    width: 100%;
     display: flex;
     align-items: center;
-    margin-top: 50px;
     
 `
 

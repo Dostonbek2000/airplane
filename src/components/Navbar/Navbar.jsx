@@ -16,7 +16,7 @@ const Navbar = () => {
             </LogoWrapper>
             <LinkWrapper>
                <Links1 to='/'><HomeIcon /> <Span>Home</Span> </Links1>
-               <Links to='/comparison'> <CompareIcon /> <Span>Comparison</Span></Links>
+               <Links to='/comparison'> <CompareIcon /> <Span>Distance</Span></Links>
             </LinkWrapper>
         </NavbarWrapper>
     </Container>

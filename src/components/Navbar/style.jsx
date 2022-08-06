@@ -61,7 +61,7 @@ export const Span = styled.span``
 export const Links = styled(NavLink)`
     background: ${specialColor};
     color: white;
-    width: 200px;
+    width: 130px;
     height: 35px;
     border-radius: 5px;
     text-decoration: none;
@@ -69,7 +69,6 @@ export const Links = styled(NavLink)`
     justify-content: center;
     align-items: center;
     margin: 5px 15px;
-    box-shadow: 0px 0px 10px 1px #91caff;
     @media (max-width:800px) {
         width: 45px;
         span{
@@ -82,12 +81,11 @@ export const Links = styled(NavLink)`
     
 `
 export const Links1 = styled(NavLink)`
-    border: 1px solid ${specialColor};
-    color: ${specialColor};
-    width: 200px;
+    border: 1px solid #bdbdbd;
+    color: #474747;
+    width: 130px;
     height: 35px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px 1px #91caff;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -106,7 +104,7 @@ export const Links1 = styled(NavLink)`
 `
 
 export const HomeIcon = styled(HomeRoundedIcon)`
-    color: ${specialColor} !important;
+    color: #868686 !important;
     font-size: 20px !important;
     margin-right:6px;
     @media (max-width:800px) {

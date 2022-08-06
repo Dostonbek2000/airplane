@@ -2,10 +2,10 @@ import React, { useRef, useState } from 'react'
 import { Container, FullInfoContainer, HomeWrapper, InfoWrapper, LineOfTitle, PlaneImg, SearchText, SearchWrapper, StartSelect, Title } from './style'
 import { InfoIcon, TitleContainer ,Title1} from '../Info/style';
 import DropdownList from "react-widgets/DropdownList";
-import "react-widgets/styles.css";
 import AirPlaneData from '../../data/airports.json'
 import Info from '../Info/Info';
 import { Maps } from '../Maps/Maps';
+import "react-widgets/styles.css";
 
 
 
@@ -37,7 +37,10 @@ const Default = () => {
     <Container>
       <HomeWrapper>
           <LineOfTitle>
-              <Title>Choose your Trip</Title>
+            <TitleContainer>
+                <InfoIcon />
+                <Title1>AirCraft info on this route</Title1>
+            </TitleContainer>
               <SearchWrapper>
                 <SearchText>Search Trip :</SearchText>
                 <DropdownList
@@ -58,10 +61,6 @@ const Default = () => {
                 />
               </SearchWrapper>
           </LineOfTitle>
-          <TitleContainer>
-              <InfoIcon />
-              <Title1>AirCraft info on this route</Title1>
-           </TitleContainer>
           <InfoWrapper>
               {airInfo !== undefined ? <Info data={airInfo} /> : 
                 <FullInfoContainer>
