@@ -43,3 +43,17 @@ body::-webkit-scrollbar-thumb {
 .MuiTableCell-sizeSmall {
   font-family: 'Poppins' !important;
 }
+
+.maintable ::-webkit-scrollbar {
+  width: 1em;
+}
+
+.maintable ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(202, 73, 73, 0.3);
+          box-shadow: inset 0 0 6px rgba(202, 73, 73, 0.3);
+}
+
+.maintable ::-webkit-scrollbar-thumb {
+  background-color: #e80a0a !important;
+  outline: 1px solid slategrey;
+}

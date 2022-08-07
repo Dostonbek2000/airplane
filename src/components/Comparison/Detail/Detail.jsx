@@ -6,7 +6,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { BlueBox, Container, GreenBox, Title, YellowBox } from "./style";
+import { BlueBox, Container, GreenBox, SpecialTitle, Title, YellowBox } from "./style";
 
 const Detail = ({ data,title }) => {
   
@@ -16,8 +16,9 @@ const Detail = ({ data,title }) => {
   return (
     <Container>
       <Title> {data !== undefined ? `${title}  ${data.name}` : `${title}  Airport`}</Title>
-      <TableContainer component={Paper}>
+      <TableContainer  className='maintable' component={Paper} >
         <Table
+        className='maintable'
           sx={{ minWidth: 650, fontWeight: 600 }}
           size="small"
           aria-label="a dense table"
@@ -89,9 +90,9 @@ const Detail = ({ data,title }) => {
           </TableBody>
         </Table>
       </TableContainer>
-      <div>
-        aslom
-      </div>
+      <SpecialTitle>
+        Details of {data!==undefined ? data?.name : 'Airport'} {data?.tz}
+      </SpecialTitle>
     </Container>
   );
 };

@@ -11,12 +11,16 @@ export const Title = styled.div`
     font-size: 23px;
     font-weight: 500;
     margin-bottom: 15px;
-    border-left:4px solid orange ;
+    border-left:7px solid orange ;
     height: 28px;
     display: flex;
     align-items: center;
     padding-left: 10px;
-    
+    /* background-color: #ebfaff; */
+    border-radius: 3px;
+    @media (max-width:500px){
+        font-size: 18px;
+    }
 `
 
 
@@ -53,3 +57,16 @@ export const YellowBox = styled.div`
     align-items: center;
     border-radius: 4px;
 ` 
+
+export const SpecialTitle = styled.div`
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #76ddff;
+    @media (max-width:500px){
+        font-size: 17px;
+    }
+`
