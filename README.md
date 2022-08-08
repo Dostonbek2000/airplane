@@ -8,3 +8,4 @@
 # responsive
 # give info about distance and duration of two states by plane
 # preview https://airplane-distance.netlify.app/
+# github https://github.com/Dostonbek2000/airplane
