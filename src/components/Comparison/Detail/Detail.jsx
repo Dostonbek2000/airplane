@@ -7,6 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { BlueBox, Container, GreenBox, SpecialTitle, Title, YellowBox } from "./style";
+import { bgColor } from "../../../constants/customStyle";
 
 const Detail = ({ data,title }) => {
   
@@ -16,7 +17,7 @@ const Detail = ({ data,title }) => {
   return (
     <Container>
       <Title> {data !== undefined ? `${title}  ${data.name}` : `${title}  Airport`}</Title>
-      <TableContainer  className='maintable' component={Paper} >
+      <TableContainer style={{background:bgColor}}  className='maintable' component={Paper} >
         <Table
         className='maintable'
           sx={{ minWidth: 650, fontWeight: 600 }}

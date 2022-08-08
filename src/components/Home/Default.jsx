@@ -6,13 +6,17 @@ import AirPlaneData from '../../data/airports.json'
 import Info from '../Info/Info';
 import { Maps } from '../Maps/Maps';
 import "react-widgets/styles.css";
+import { useDispatch,useSelector } from 'react-redux';
 
 
 
 
 const Default = () => {
   const [airInfo, setAirInfo] = useState(undefined);
-  const SelectRef = useRef()
+  const SelectRef = useRef();
+  const dispatch = useDispatch()
+  const HomeData = useSelector(state=>state.HomeReducer)
+
 
   function filterLastName(con, value) {
     let lastname = con.country.toLowerCase()
@@ -20,11 +24,10 @@ const Default = () => {
     return lastname.indexOf(search) === 0
   }
 
-  console.log(airInfo);
-
 
   function OnSelected(info) {
     setAirInfo(info)
+    dispatch({type:'HOME_INFO',payload:info})
   }
 
   function SelectStart() {
@@ -62,14 +65,14 @@ const Default = () => {
               </SearchWrapper>
           </LineOfTitle>
           <InfoWrapper>
-              {airInfo !== undefined ? <Info data={airInfo} /> : 
+              {HomeData !== undefined ? <Info data={HomeData} /> : 
                 <FullInfoContainer>
                       <StartSelect onClick={SelectStart}>Select Airplane</StartSelect>
                 </FullInfoContainer>
               }
               
           </InfoWrapper>
-          <Maps data={airInfo} />
+          <Maps data={HomeData} />
       </HomeWrapper>
     </Container>
   )

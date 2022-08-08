@@ -25,6 +25,7 @@ import AirPlaneData from "../../data/airports.json";
 import DropdownList from "react-widgets/DropdownList";
 import Detail from "./Detail/Detail";
 import { CircularProgress } from "@mui/material";
+import { useDispatch,useSelector } from "react-redux";
 
 const Comparison = () => {
   const [airInfo1, setAirInfo1] = useState(undefined);
@@ -32,15 +33,20 @@ const Comparison = () => {
   const [distance, setdistance] = useState(undefined);
   const [hours, sethours] = useState(undefined);
   const SelectRef = useRef();
+  const dispatch = useDispatch();
+  const DetailData_one = useSelector(state=>state.AIR_FIRST)
+  const DetailData_two = useSelector(state=>state.AIR_SECOND)
+
+  console.log('====================================');
+  console.log(DetailData_one);
+  console.log(DetailData_two);
+  console.log('====================================');
 
   function filterLastName(con, value) {
     let lastname = con.country.toLowerCase();
     let search = value.toLowerCase();
     return lastname.indexOf(search) === 0;
   }
-
-  console.log(airInfo1);
-  console.log(airInfo2);
 
   function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
     console.log(lat1,lon1,lat2,lon2);
@@ -66,20 +72,20 @@ const Comparison = () => {
   function OnSelectedFrom(info) {
     setAirInfo1(info);
     OnDisUpdate()
-
+    dispatch({type:'SET_AIR_INFO_ONE',payload:info})
   }
   
   
   function OnSelectedTo(info) {
     setAirInfo2(info);
     OnDisUpdate()
+    dispatch({type:'SET_AIR_INFO_TWO',payload:info})
     
   }
   
   
   function OnDisUpdate(params) {
     getDistanceFromLatLonInKm(airInfo1?.lat*1,airInfo1?.lon*1,airInfo2?.lat*1,airInfo2?.lon*1)
-    console.log(distance);
   }
 
 
@@ -131,10 +137,10 @@ const Comparison = () => {
         </FormContainer>
         <BigDetailContainer>
           <WrapperOne>
-              <Detail data={airInfo1} title={'From'} />
+              <Detail data={DetailData_one} title={'From'} />
           </WrapperOne>
           <WrapperTwo>
-              <Detail data={airInfo2} title={'To'} />
+              <Detail data={DetailData_two} title={'To'} />
           </WrapperTwo>
         </BigDetailContainer>
         <BigDetailContainer2>

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import {mainColor, specialColor} from '../../constants/customStyle';
+import {bgColor, specialColor} from '../../constants/customStyle';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
 
@@ -11,6 +11,7 @@ export const Container = styled.div`
     justify-content: center;
     height: 80px;
     box-shadow: 0px 0px 3px #909090;
+    background: ${bgColor};
 `
 
 export const NavbarWrapper = styled.div`

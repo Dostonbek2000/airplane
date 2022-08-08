@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {mainColor, specialColor} from '../../constants/customStyle';
+import {bgColor,  specialColor} from '../../constants/customStyle';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 export const Container = styled.div`
@@ -7,7 +7,8 @@ export const Container = styled.div`
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
+    background: ${bgColor};
 `
 
 export const HomeWrapper = styled.div`

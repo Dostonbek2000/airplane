@@ -24,7 +24,7 @@ const Info = ({data,setRender}) => {
         <FullInfoContainer>
             <InnerTitle>
                 <TitleNext>
-                    {icao}{woeid}/ {tz}
+                    {icao === undefined ? 'Info' : icao}{woeid}/ {tz}
                 </TitleNext>
                 <Badge>Aircraft Info</Badge>
             </InnerTitle>
